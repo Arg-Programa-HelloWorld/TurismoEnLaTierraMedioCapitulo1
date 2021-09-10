@@ -1,0 +1,9 @@
+1, Moria, 10, 2, 6, AttractionType.ADVENTURE
+2,Minas Tirith, 5, 2.5, 25, AttractionType.SCENERY
+3,La Comarca, 3, 6.5, 150, AttractionType.TASTING
+4,Mordor, 25, 3, 4, AttractionType.ADVENTURE
+5,Abismo de Helm, 5, 2, 15, AttractionType.SCENERY
+6,Lothlorien, 35, 1, 30, AttractionType.TASTING
+7,Erebor, 12, 3, 32, AttractionType.SCENERY
+8,Bosque Negro, 3, 4, 12, AttractionType.ADVENTURE
+9,Paso de Caradhras, 9, 8, 7, AttractionType.SCENERY

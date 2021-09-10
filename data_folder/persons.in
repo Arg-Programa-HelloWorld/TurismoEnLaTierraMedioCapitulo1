@@ -1,0 +1,8 @@
+1, Eowyn-Normal, 10, 8, AttractionType.ADVENTURE
+2, Eowyn-2-AtracNoBudget, 13, 9, AttractionType.ADVENTURE
+3, Eowyn-2-AtracNoTime, 48, 8, AttractionType.ADVENTURE
+4, Eowyn-noBudget, 17, 10, AttractionType.ADVENTURE
+5, Gandalf, 100, 5, AttractionType.SCENERY
+6, Sam, 36, 8, AttractionType.TASTING
+7, Galadriel, 120, 6, AttractionType.SCENERY
+8, Roberto, 100, 100, AttractionType.SCENERY

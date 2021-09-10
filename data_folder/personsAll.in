@@ -1,0 +1,10 @@
+1, Eowyn, 10, 8, AttractionType.ADVENTURE
+2, Gandalf, 100, 5, AttractionType.SCENERY
+3, Sam, 36, 8, AttractionType.TASTING
+4, Galadriel, 120, 2, AttractionType.SCENERY
+5, Frodo, 15, 4, AttractionType.TASTING
+6, Meriadoc, 25, 8, AttractionType.TASTING
+7, Peregrin, 40, 12, AttractionType.ADVENTURE
+8, Boromir, 10, 9, AttractionType.TASTING
+9, Legolas, 26, 4, AttractionType.SCENERY
+10, Gimli, 38, 12, AttractionType.SCENERY
