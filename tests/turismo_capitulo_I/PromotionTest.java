@@ -4,11 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TurismoTest {
+public class PromotionTest {
 
 	@Test
-	public void atraccionTest() {
-
+	public void test() {
 		
 		
 		

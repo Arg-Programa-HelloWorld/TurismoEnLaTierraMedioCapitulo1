@@ -105,6 +105,8 @@ public class LoadPromotions {
 				line = bufferReader.readLine();
 
 			}
+			
+			return true;
 
 		} catch (IOException e) {
 
@@ -124,12 +126,10 @@ public class LoadPromotions {
 			} catch (Exception e2) {
 
 				e2.printStackTrace();
-
+			
 			}
 
 		}
-
-		return true;
 
 	}
 
