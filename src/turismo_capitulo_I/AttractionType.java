@@ -11,7 +11,6 @@ public enum AttractionType {
 // PARA USARLO DESDE AFUERA ES ALGO ASI COMO
 
 /*
-
 		Atraccion laComarca = new Atraccion(3, 6.5, 150, Tipo.DEGUSTACION);
 		
 		if (laComarca.getTipo().equals(Tipo.DEGUSTACION)) {

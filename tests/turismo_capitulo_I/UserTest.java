@@ -45,6 +45,11 @@ public class UserTest {
 	
 	
 	User roberto;
+	User gandalf;
+	User sam;
+	User galadriel;
+	User frodo;
+	User meriadoc;
 	
 	Attraction moria;
 	Attraction minasTirith;
@@ -71,7 +76,12 @@ public class UserTest {
 	public void setup() {
 		
 		roberto = new User(1, "Roberto", 100, 100, AttractionType.SCENERY);
-		
+		gandalf = new User(2, "Gandalf", 100, 5, AttractionType.SCENERY);
+		sam = new User(3, "Sam", 36, 8, AttractionType.TASTING);
+		galadriel = new User(4, "Galadriel", 120, 2, AttractionType.SCENERY);
+		frodo = new User(5, "Frodo", 15, 4, AttractionType.TASTING);
+		meriadoc = new User(6, "Meriadoc", 25, 8, AttractionType.TASTING);
+				
 		moria = new Attraction(1, "Moria", 10, 2, 6, AttractionType.ADVENTURE);
 		minasTirith = new Attraction(2, "Minas Tirith", 5, 2.5, 25, AttractionType.SCENERY);
 		laComarca =  new Attraction(3, "La Comarca", 3, 6.5, 150, AttractionType.TASTING);
@@ -108,6 +118,8 @@ public class UserTest {
 	@Test
 	public void newUserTest() {
 		
+		// Crear un Usuario.-
+		
 		assertNotNull(roberto);
 		
 		assertEquals(1, roberto.getId());
@@ -127,6 +139,12 @@ public class UserTest {
 	
 	@Test
 	public void buyAnAttractionTest() {
+		
+		//	Comprar una atraccion, 
+		
+		//  -Comprobar que nos descuenta Presupuesto.-
+		//  -Comprobar que nos descuenta Tiempo.-
+		//  -Y que realmente la tenemos en nuestra lista de atracciones.-
 		
 		attractionsList.add(moria);
 		attractionsList.add(minasTirith); // Carga lista para comparar.-
@@ -149,6 +167,10 @@ public class UserTest {
 	@Test
 	public void buyAttractionWithoutMoneyTest() {
 		
+		// Comprar Atracción sin Dinero.-
+		
+		// -Demuestra que no lo podemos hacer.-
+		
 		roberto.setBudget(0);
 		
 		roberto.buyAttraction(moria);	// Intenta comprar la atraccion pero no puede por falta de dinero.-
@@ -159,6 +181,10 @@ public class UserTest {
 	
 	@Test
 	public void buyPromotionWithoutMoneyTest() {
+		
+		// Comprar Promoción sin Dinero.-
+		
+		// -Demuestra que no lo podemos hacer.-
 		
 		attractionsList.add(lothlorien);
 		attractionsList.add(laComarca);
@@ -176,6 +202,10 @@ public class UserTest {
 	@Test
 	public void buyAttractionWithoutTimeTest() {
 		
+		// Comprar Atracción sin Tiempo.-
+		
+		// -Demuestra que no lo podemos hacer.-
+		
 		roberto.setTime(0);
 		
 		roberto.buyAttraction(moria);	// Intenta comprar la atraccion pero no puede por falta de Tiempo.-
@@ -186,6 +216,10 @@ public class UserTest {
 	
 	@Test
 	public void buyPromotionWithoutTimeTest() {
+		
+		// Comprar Promoción sin Tiempo.-
+		
+		// -Demuestra que no lo podemos hacer.-
 		
 		attractionsListAbsolute.add(lothlorien);
 		attractionsListAbsolute.add(laComarca);
@@ -203,7 +237,11 @@ public class UserTest {
 	}
 	
 	@Test
-	public void buyOwnedAttractionTest() {
+	public void buyAttractionWeAlreadyQwnTest() {
+		
+		// Comprar Atracción que ya poseemos
+		
+		// -Comprueba que un Usuario "N" no podra comprar una Atraccion si ya la compro con anterioridad "la tiene en su lista".-
 		
 		attractionsList.add(moria);		// Carga la atraccion moria a la lista para comparar.-
 		
@@ -228,6 +266,10 @@ public class UserTest {
 	@Test
 	public void buyPercentagePromotionTest() {
 		
+		// Compra de una Promocion de tipo Promocion Porcentual
+		
+		// -Comprueba el descuento de un N porciento sobre el total.-
+		
 		attractionsListPercentage.add(bosqueNegro);
 		attractionsListPercentage.add(mordor);
 		
@@ -237,7 +279,7 @@ public class UserTest {
 		promotionsList.clear();
 		promotionsList.add(promotion);
 				
-		roberto.buyPromotion(promotion); // Compra promotion
+		roberto.buyPromotion(promotion); // Compra promotion.-
 		
 		//System.out.println(roberto.getBudget());
 		
@@ -266,6 +308,10 @@ public class UserTest {
 	@Test
 	public void buyPromotionAbsoluteTest() {
 		
+		// Compra de una Promocion de tipo Promocion descuento Absoluto
+		
+		// -Comprueba el descuento de un N "fijo-estipulado para esa promocion" sobre el total.-
+		
 		attractionsListAbsolute.add(lothlorien);
 		attractionsListAbsolute.add(laComarca);
 		
@@ -275,7 +321,7 @@ public class UserTest {
 		promotionsList.clear();
 		promotionsList.add(promotion);
 				
-		roberto.buyPromotion(promotion); // Compra promotion
+		roberto.buyPromotion(promotion); // Compra promotion.-
 		
 		//System.out.println(roberto.getBudget());
 		
@@ -304,6 +350,12 @@ public class UserTest {
 	@Test
 	public void buyPromotionA_and_BTest() {
 		
+		// Compra de una Promocion de tipo Promocion A x B
+		
+		// -Comprueba el descuento del tercer producto.-
+		// -El usuario compra una promocion 
+		//  Atrac1 + Atrac2 + Atrac3 siendo esta ultima gratuita, pagando solo la suma de las dos primeras.- 
+		
 		attractionsListA_and_B.add(minasTirith);
 		attractionsListA_and_B.add(abismoDeHelm);
 		attractionsListA_and_B.add(erebor);
@@ -314,7 +366,7 @@ public class UserTest {
 		promotionsList.clear();
 		promotionsList.add(promotion);
 				
-		roberto.buyPromotion(promotion); // Compra promotion
+		roberto.buyPromotion(promotion); // Compra promotion.-
 		
 		//System.out.println(roberto.getBudget());
 		
@@ -332,7 +384,7 @@ public class UserTest {
 		// 22 - 12 => $10
 		assertEquals(10, promotion.getCost(), 0.001);
 		
-		// Las dos Atracciones que incluye tienen un tiempo individual de 
+		// Las dos Atracciones que incluye tienen un tiempo individual de: 
 		// -Minas Tirith = 2.5hs. 
 		// -Abismo de Helm = 2hs.
 		// -Erebor = 3hs.
@@ -344,7 +396,11 @@ public class UserTest {
 	}
 	
 	@Test
-	public void buyOwnedPromotionTest() {
+	public void buyPromotionThatWeAlreadyOwn() {
+		
+		// Comprar promoción que ya poseemos
+		
+		// -Comprueba que un Usuario "N" no podra comprar una Promocion si ya la compro con anterioridad "la tiene en su lista".-
 		
 		attractionsList.add(moria);			//	Carga la atraccion moria a la lista para comparar.-
 		attractionsList.add(minasTirith); 	//  Carga la atraccion minasTirith a la lista para comparar.-
@@ -362,12 +418,12 @@ public class UserTest {
 		
 		assertTrue(roberto.havePromotion(promotion));	//	Comprueba que ya posee la promocion en sus compras.-
 		
-		// Intenta comprar la misma procion nuevamente
+		// Intenta comprar la misma procion nuevamente.-
 		
-		roberto.buyPromotion(promotion);	// Al ya tenerla promocion, la compra no se realiza
+		roberto.buyPromotion(promotion);	// Al ya tenerla promocion, la compra no se realiza.-
 		
-		assertEquals(90, roberto.getBudget(), 0);	// Mantiene el mismo dinero
-		assertEquals(95.5, roberto.getTime(), 0);	// Mantiene el mismo Tiempo
+		assertEquals(90, roberto.getBudget(), 0);	// Mantiene el mismo dinero.-
+		assertEquals(95.5, roberto.getTime(), 0);	// Mantiene el mismo Tiempo.-
 		
 		assertEquals(promotionsList, roberto.getListOfPromotions());
 	
@@ -375,6 +431,11 @@ public class UserTest {
 	
 	@Test
 	public void buyPromotionWithOwnedAttractionTest() {
+		
+		// Comprar una promocion que contiene una Atraccion que ya poseemos.-
+		
+		// -Demuestra que no se efectuara la compra por ya poseer un producto de la lista de
+		// -productos de la promocion.-
 		
 		roberto.buyAttraction(moria); // Compro atracciones.-
 		
@@ -405,24 +466,29 @@ public class UserTest {
 	@Test
 	public void buyAttractionWithOwnedPromotionTest() {
 		
+		// Comprar una Atraccion que esta contenida en una Promocion que ya poseemos.-
+		
+		// -Demuestra que no se efectuara la compra por ya poseer el producto en una lista de
+		// -productos de una promocion anteriormente adquirida.-
+		
 		attractionsList.add(moria);
-		attractionsList.add(minasTirith); // Carga lista de promocion
+		attractionsList.add(minasTirith); // Carga lista de promocion.-
 		
 		promotion = new PromotionAbsolute(2, PromotionType.ABSOLUTE, "Oferton", attractionsList, 5);
 		
-		promotionsList.add(promotion); // Carga lista para comparar
+		promotionsList.add(promotion); // Carga lista para comparar.-
 				
-		roberto.buyPromotion(promotion); // Intenta comprar promocion
+		roberto.buyPromotion(promotion); // Intenta comprar promocion.-
 		
 		assertEquals(90, roberto.getBudget(), 0);
 		assertEquals(95.5, roberto.getTime(), 0);
 		
 		
-		// Intento comprar promocion que contiene una atraccion ya comprada
+		// Intento comprar promocion que contiene una atraccion ya comprada.-
 		
-		roberto.buyAttraction(moria); // Compro atracciones
+		roberto.buyAttraction(moria); // Compro atracciones.-
 		
-		attractionsList.add(moria); // Carga lista para comparar
+		attractionsList.add(moria); // Carga lista para comparar.-
 		
 		assertEquals(90, roberto.getBudget(), 0);
 		assertEquals(95.5, roberto.getTime(), 0);
@@ -434,12 +500,54 @@ public class UserTest {
 	@Test
 	public void calculateTimeAndGoldSpentTest() {
 		
+		// Calcula Tiempo y Dinero gastado en nuestro itinerario.-
+		
 		roberto.buyAttraction(moria);
 		roberto.buyAttraction(minasTirith);
 		roberto.calculateTimeAndGoldSpent();
 				
 		assertEquals(15, roberto.getTotalGold(), 0);
 		assertEquals(4.5, roberto.getTotalTime(), 0);
+		
+	}
+	
+	@Test
+	public void runOutOfAnAttraction() {
+		
+		// Quedarse sin atracción.-
+		
+		// -Demuestra que tras la compra de un usuario sobre una atraccion esta pierde un cupo
+		
+		assertEquals(6, moria.getQuota());
+		
+		roberto.buyAttraction(moria);
+		gandalf.buyAttraction(moria);
+		sam.buyAttraction(moria);
+		galadriel.buyAttraction(moria);
+		frodo.buyAttraction(moria);
+		meriadoc.buyAttraction(moria);
+		
+		assertEquals(0, moria.getQuota());
+				
+	}
+	
+	@Test
+	public void updateTheQuotaOfAnAttractionByPurchasingAPromotion() {
+		
+		// Actualizar cupo de una atracción por compra de una promocion.-
+		
+		// -Demuestra que tras la compra de una Promocion, cada atraccion contenida pierde un cupo.-
+		
+		attractionsList.add(moria);
+		attractionsList.add(minasTirith); // Carga lista de promocion.-
+		
+		promotion = new PromotionAbsolute(2, PromotionType.ABSOLUTE, "Oferton", attractionsList, 5);
+		
+		assertEquals(6, moria.getQuota());
+		
+		roberto.buyPromotion(promotion);
+		
+		assertEquals(5, moria.getQuota());
 		
 	}
 	

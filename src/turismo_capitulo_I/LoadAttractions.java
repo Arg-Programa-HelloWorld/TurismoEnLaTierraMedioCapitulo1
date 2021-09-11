@@ -102,13 +102,15 @@ public class LoadAttractions {
 	}
 
 	protected static ArrayList<Attraction> getAttractionList() {
+		
 		return attractionList;
+		
 	}
 
 	protected static void setAttractionList(ArrayList<Attraction> attractionList) {
+		
 		LoadAttractions.attractionList = attractionList;
+		
 	}
 	
-	
-
 }

@@ -49,6 +49,7 @@ public class Functions {
 					System.out.println();
 					
 				}
+				
 			}
 			
 		}
@@ -84,8 +85,7 @@ public class Functions {
 		
 			if(Model.user.haveAttraction(attraction)) {
 				
-				
-				
+							
 			} else {				
 			
 				if (!Model.user.haveAttraction(attraction) && attraction.getAttractionType() == at && attraction.getTime() <= time && attraction.getCost() <= budget) {
@@ -165,31 +165,52 @@ public class Functions {
 				if (Model.user.getBudget() > 0 && Model.user.getTime() > 0) {
 									
 					for (User user : LoadUsers.getUserList()) {
+						
 						if(user.getId() == Model.user.getId()) {
+						
 							Model.user.buyAttraction(Model.attraction);
-							Model.attraction.setQuota(Model.attraction.getQuota()-1);
+							// Este metodo "buyAttraction" se encargara a travez del siguiente metodo
+							// removeQuotaOfAnAttraction(newAttraction) que se ubica en el usuario de
+							// descontar una cantidad en el cupo de la atraccion.- 
+							
+							
+							// Si quisieramos utilizar el getter & setter de
+							// Atraccion cuando realizamos la compra por el user
+							// lo hariamos como esta aca abajo
+													
+							//Model.attraction.setQuota(Model.attraction.getQuota()-1);
+																				
 						}
+												
 					}
 					
 				} else if (Model.user.getBudget() > 0){
 					
 					for (User user : LoadUsers.getUserList()) {
+						
 						if(user.getId() == Model.user.getId()) {
+						
 							Model.user.buyAttraction(Model.attraction);
+							
 						}
 					}
 										
 				} else if (Model.user.getTime() > 0){
 					
 					for (User user : LoadUsers.getUserList()) {
+						
 						if(user.getId() == Model.user.getId()) {
+						
 							Model.user.buyAttraction(Model.attraction);
+							
 						}
+						
 					}
 					
 				}
+
 			} 
-		
+
 		}
 
 	}
@@ -271,6 +292,7 @@ public class Functions {
 					System.out.println("[ " + promotion.getId() + " - The , " + promotion.getName().toUpperCase() + "."); 
 					System.out.println("[ Has a cost of: " + String.format("%.2f", promotion.getCost()) + " gold coins, and required " + promotion.getTime() + " hs.");
 					System.out.println("[ Includes the following attractions: ");
+					
 					for(Attraction atraction : promotion.getAttractionsList()) {
 						
 						System.out.println("[ -" + atraction.getName());
@@ -340,14 +362,25 @@ public class Functions {
 				if (Model.user.getBudget() > 0 && Model.user.getTime() > 0) {
 									
 					for (User user : LoadUsers.getUserList()) {
+						
 						if(user.getId() == Model.user.getId()) {
+						
 							Model.user.buyPromotion(Model.promotion);
-							//Model.promotion.setQuota(Model.promotion.getQuota()-1);
+							// Este metodo buy promotion se encargara a travez del siguiente metodo
+							// removeQuotaOfAnAttraction(newAttraction) que se ubica en el usuario de
+							// descontar una cantidad en el cupo de la atraccion.- 
 							
+							
+							
+							// Si quisieramos utilizar el getter & setter de
+							// Atraccion cuando realizamos la compra por el user
+							// lo hariamos como esta aca abajo
+							/*
 							for(Attraction attraction: Model.promotion.attractionList) {
 								attraction.setQuota(attraction.getQuota()-1);
 							}
-							
+							*/
+																	
 						}
 						
 					}
@@ -355,22 +388,31 @@ public class Functions {
 				} else if (Model.user.getBudget() > 0){
 					
 					for (User user : LoadUsers.getUserList()) {
+						
 						if(user.getId() == Model.user.getId()) {
+						
 							Model.user.buyPromotion(Model.promotion);
+							
 						}
+						
 					}
-										
+								
 				} else if (Model.user.getTime() > 0){
 					
 					for (User user : LoadUsers.getUserList()) {
+				
 						if(user.getId() == Model.user.getId()) {
+							
 							Model.user.buyPromotion(Model.promotion);
+							
 						}
+
 					}
-					
+
 				}
+
 			} 			
-						
+
 		}
 
 	}
@@ -405,6 +447,7 @@ public class Functions {
 				View.colorearMensaje(View.green,"[---------------------------------------------------------------------]");
 				
 				View.colorearMensaje(View.blue,"[ Your attractions...");
+				
 				for (Attraction attraction : user.getListOfAttractions()) {
 										
 					
@@ -442,27 +485,3 @@ public class Functions {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

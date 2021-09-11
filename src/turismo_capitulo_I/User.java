@@ -218,6 +218,12 @@ public class User {
 			this.spendTime(newAttraction.getTime()); 	// Uso tiempo
 			this.setListOfAttractions(newAttraction); 	// Agrego la atracion a la lista
 			
+			//newAttraction.setQuota(newAttraction.getQuota() - 1);
+			
+			// Mejoradolo aun más en un metodo quitar cupo para ser utilizado desde una compra
+			// de Atraccion o por compra de una Promocion.-  
+			removeQuotaOfAnAttraction(newAttraction);
+			
 		}	
 		
 	}	
@@ -246,6 +252,19 @@ public class User {
 				this.spendTime(newPromotion.getTime()); 	// Uso tiempo
 				this.setListOfPromotions(newPromotion); 	// Agrego la promotion a la lista
 				
+				
+				for(Attraction attraction: newPromotion.getAttractionsList()) {
+					
+					// Este metodo se encarga de descontar una cantidad en el cupo de la atraccion.-
+					//attraction.setQuota(attraction.getQuota()-1);
+					
+					// Mejoradolo aun más en un metodo quitar cupo para ser utilizado desde una compra
+					// de Atraccion o por compra de una Promocion.-  
+					removeQuotaOfAnAttraction(attraction);
+					
+				}
+				
+				
 			} else {
 				
 				View.colorearMensaje(View.red,"[---------------------------------------------------------------------]");
@@ -256,6 +275,12 @@ public class User {
 			
 		}
 
+	}
+	
+	protected void removeQuotaOfAnAttraction(Attraction anAttraction) {
+		
+		anAttraction.setQuota(anAttraction.getQuota()-1);
+		
 	}
 	
 	protected void calculateTotalTime() {
@@ -306,27 +331,3 @@ public class User {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

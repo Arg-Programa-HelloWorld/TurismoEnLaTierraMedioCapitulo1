@@ -5,7 +5,7 @@ public class Attraction {
 	// Costo de visita.-
 	// Tiempo promedio para realizarla.-
 	// Cupo de personas.-
-	// Tipo de attractionName1: paisaje, de aventura, de desgustacion (Aventura, Paisaje, Degustacion).-
+	// Tipo de attraction: paisaje, de aventura, de desgustacion (Aventura, Paisaje, Degustacion).-
 
 	private int id;			// ID
 	private String name;	// nombre
@@ -20,12 +20,12 @@ public class Attraction {
 
 	public Attraction(int id, String name, double cost, double time, int quota, AttractionType attractionType) {
 
-		this.id = id;
-		this.name = name; // nombre
-		this.cost = cost; // costo
-		this.time = time; // tiempo
+		this.id = id;		// ID		
+		this.name = name;   // nombre
+		this.cost = cost;   // costo
+		this.time = time;   // tiempo
 		this.quota = quota; // cupo
-		this.attractionType = attractionType; // el tipo de attractionName1
+		this.attractionType = attractionType; // el tipo de attraction.-
 
 	}
 
@@ -66,7 +66,5 @@ public class Attraction {
 	public int getId() {
 		return id;
 	}
-
-	
 
 }

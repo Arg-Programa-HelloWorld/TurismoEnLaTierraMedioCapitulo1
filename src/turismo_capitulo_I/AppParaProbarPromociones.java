@@ -24,6 +24,7 @@ public abstract class AppParaProbarPromociones {
 			System.out.println("----------------------");			
 			
 		}
+		
 	}
 
 }

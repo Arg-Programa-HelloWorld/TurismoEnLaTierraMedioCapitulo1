@@ -20,7 +20,6 @@ public abstract class Promotion {
 		this.attractionList = attractionList;
 		
 	}
-
 	
 	public void calculatePrice() {
 		
@@ -30,26 +29,21 @@ public abstract class Promotion {
 		return id;
 	}
 
-
 	protected ArrayList<Attraction> getAttractionsList() {
 		return attractionList;
 	}
-
 
 	public double getCost() {
 		return cost;
 	}
 
-
 	public double getTime() {
 		return time;
 	}
 
-
 	public PromotionType getPromotionType() {
 		return promotionType;
 	}
-
 
 	public String getName() {
 		return name;

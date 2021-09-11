@@ -2,7 +2,7 @@ package turismo_capitulo_I;
 
 public class View {
 	
-	//	Para que te funcione en eclipse busca el pluging ANSI escape in console
+	//	Para que te funcione en eclipse buscar el pluging "ANSI escape in console"
 	//  en el MarketPlace he instalarlo, reinicia eclipse y listo.
 	
 	private static String black = "\033[30m";
@@ -178,15 +178,14 @@ public class View {
 		colorearMensaje(green,"[ '" + Model.user.getName() + "', your budget is " + Model.user.getBudget() + ", and you have " + Model.user.getTime() + " Hs");
 		colorearMensaje(green,"[  and your preference is: " + Model.user.getPreferences());
 		colorearMensaje(green,"[---------------------------------------------------------------------]");
-		//System.out.println();
-
+		
 	}
 		
 	public static void farewellGreetings() {
 		colorearMensaje(blue,"[---------------------------------------------------------------------]");
 		colorearMensaje(blue,"[                  SEE YOU IN THE NEXT ADVENTURE !!!                  ]");
 		colorearMensaje(blue,"[---------------------------------------------------------------------]");
+		
 	}
 	
-
 }

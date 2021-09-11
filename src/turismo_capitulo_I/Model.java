@@ -56,19 +56,19 @@ public class Model {
 								Functions.getPromotionTimeLimit(user.getTime());
 								//View.line();
 								
-							}else if(idMenuPromotion == 2) { // 2 - See all promotions.-
+							} else if (idMenuPromotion == 2) { // 2 - See all promotions.-
 								
 								Functions.getAllPromotion();
 								//View.line();
 								
-							}else if(idMenuPromotion == 3) { // 3 - To buy.-
+							} else if (idMenuPromotion == 3) { // 3 - To buy.-
 								
 								Functions.buyPromotion(); 			
 								//View.line(); 
 								
 							}
 						
-						}while(idMenuPromotion != 0);	// 0 - Back.-
+						} while (idMenuPromotion != 0);	// 0 - Back.-
 						
 					} else if (idMenu == 2) {	// #ATTRACTIONS - ATTRACTIONS - ATTRACTIONS
 						
@@ -121,12 +121,12 @@ public class Model {
 						
 					}					
 										
-				}while(idMenu != 0); // 0 - Back.-
+				} while (idMenu != 0); // 0 - Back.-
 			
 			}
 			
 				
-		}while(idUser != 0); // 0 - Exit.-
+		} while (idUser != 0); // 0 - Exit.-
 			
 			View.farewellGreetings();
 			

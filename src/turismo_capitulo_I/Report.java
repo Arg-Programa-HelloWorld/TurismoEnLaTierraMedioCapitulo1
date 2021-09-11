@@ -10,10 +10,6 @@ public class Report {
 		
 		aUser.calculateTimeAndGoldSpent();
 		
-		// or
-		// aUser.calculateTotalTime();
-		// aUser.calculateTotalGold();
-		
 		String ruta;
 		
 		ruta = "reports/" + aUser.getName() + ".out";
@@ -22,14 +18,10 @@ public class Report {
 		
 		//  Preparo el archivo de salida
 		PrintWriter salida = new PrintWriter(new FileWriter(ruta));
-		//PrintWriter salida = new PrintWriter(new FileWriter("reports/salida.out"));
-	     
-	    //int dni = 34567890;
-	    //String s = "dni:";
-	    //salida.print(s);      
-		//salida.println(" "+ dni); 
-	
-        
+		
+		// Otra forma de usarlo:
+		// PrintWriter salida = new PrintWriter(new FileWriter("reports/salida.out"));
+	   	          
 		salida.println("[---------------------------------------------------------------------]");
 		salida.println("[                            YOUR SHOPPING                            ]");
 		salida.println("[---------------------------------------------------------------------]");
@@ -42,9 +34,9 @@ public class Report {
 				salida.println("[---------------------------------------------------------------------]");
 				
 				salida.println("[ Your attractions...");
+				
 				for (Attraction attraction : user.getListOfAttractions()) {
 										
-					
 					salida.println("[ - Attraction article No. " + attraction.getId() + " - The '" + attraction.getName() + "',");
 					salida.println("[   Has a cost of: " + String.format("%.2f", attraction.getCost()) + " gold coins, and required " + attraction.getTime() + " hs.");
 					salida.println("");
@@ -74,8 +66,7 @@ public class Report {
 				salida.println("[ The total time taken is " + user.getTotalTime() + " hs.");
 				salida.println("[ and the amount of gold coins spent is " + user.getTotalGold());
 				salida.println("[---------------------------------------------------------------------]");
-				
-				
+								
 			}
 			
 		}

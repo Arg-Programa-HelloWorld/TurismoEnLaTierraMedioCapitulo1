@@ -60,7 +60,7 @@ public class LoadUsers {
 				
 				LoadUsers.userList.add(user);
 				
-				// SSystem.out.println("Nombre " + name + ", presupuesto $" + budget + ", tiempo " + time + " preferencia " + kindOf);
+				// System.out.println("Nombre " + name + ", presupuesto $" + budget + ", tiempo " + time + " preferencia " + kindOf);
 				
 				line = bufferReader.readLine();
 											

@@ -28,6 +28,7 @@ public class PercentagePromotion extends Promotion {
 			cost += attraction.getCost();
 			time += attraction.getTime();
 			//System.out.println(attraction.getName());
+			
 		}
 		
 		super.time = time;

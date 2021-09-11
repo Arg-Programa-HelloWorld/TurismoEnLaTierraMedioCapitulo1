@@ -29,7 +29,11 @@ public class PromotionTest {
 	
 
 	@Test
-	public void ICreateAPercentagePromotion() {
+	public void createAPercentagePromotion() {
+		
+		// Creacion de una promocion de tipo porcentual
+		
+		// -Comprueba clos calculos
 	
 		//	1, PromotionType.PERCENTAGE,Pack Aventura,8,4,20
 		
@@ -77,8 +81,13 @@ public class PromotionTest {
 	}
 	
 	@Test
-	public void ICreateAAbsolutePromotion() {
+	public void createAnAbsolutePromotion() {
 
+		// Creacion de una promocion de tipo absoluta
+		
+		// -Comprueba clos calculos
+		
+		
 		//	2,PromotionType.ABSOLUTE,Pack Degustacion,6,3,2
 		
 		ArrayList<Attraction> attractionList = new ArrayList<Attraction>();	
@@ -128,6 +137,10 @@ public class PromotionTest {
 	@Test
 	public void ICreateAPromotionAandB() {
 
+		// Creacion de una promocion de tipo A x B
+		
+		// -Comprueba clos calculos
+		
 		//	3, PromotionType.A_AND_B,Pack Paisajes,2,5,7
 		
 		ArrayList<Attraction> attractionList = new ArrayList<Attraction>();	

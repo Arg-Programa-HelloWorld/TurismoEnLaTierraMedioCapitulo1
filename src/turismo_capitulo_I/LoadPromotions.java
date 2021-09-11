@@ -134,11 +134,15 @@ public class LoadPromotions {
 	}
 
 	public static ArrayList<Promotion> getPromotionList() {
+		
 		return promotionList;
+		
 	}
 
 	public static void setPromotionList(ArrayList<Promotion> promotionList) {
+	
 		LoadPromotions.promotionList = promotionList;
+		
 	}
 		
 }
