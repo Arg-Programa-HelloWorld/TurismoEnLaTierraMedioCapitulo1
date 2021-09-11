@@ -244,7 +244,7 @@ public class User {
 			
 				this.pay(newPromotion.getCost());			// Pago
 				this.spendTime(newPromotion.getTime()); 	// Uso tiempo
-				this.setListOfPromotions(newPromotion); 	// Agrego la promocion a la lista
+				this.setListOfPromotions(newPromotion); 	// Agrego la promotion a la lista
 				
 			} else {
 				

@@ -57,7 +57,7 @@ public class PromotionTest {
 		//System.out.println(promotion.getCost());
 		//System.out.println(promotion.getTime());
 		
-		// Este tipo de promocion realiza un descuento de un X %, siendo 20 el de esta promocion.-
+		// Este tipo de promotion realiza un descuento de un X %, siendo 20 el de esta promotion.-
 		// Las dos Atracciones que incluye tienen un presio de:
 		// -Bosque Negro = $3
 		// -Mordor = $25
@@ -69,7 +69,7 @@ public class PromotionTest {
 		// Las dos Atracciones que incluye tienen un tiempo individual de: 
 		// -Bosque Negro = 4hs.
 		// -Mordor = 3hs.
-		// Tiempo que se necesita para la promocion es de 4 + 3 = 7hs.-
+		// Tiempo que se necesita para la promotion es de 4 + 3 = 7hs.-
 		assertEquals(7.0, promotion.getTime(), 0.001);
 		
 		assertEquals(PromotionType.PERCENTAGE, promotion.getPromotionType());
@@ -106,7 +106,7 @@ public class PromotionTest {
 		//System.out.println(promotion.getCost());
 		//System.out.println(promotion.getTime());
 		
-		// Este tipo de promocion realiza un descuento de un X monto fijo, siendo 2 el de esta promocion.-
+		// Este tipo de promotion realiza un descuento de un X monto fijo, siendo 2 el de esta promotion.-
 		// Las dos Atracciones que incluye tienen un presio de:
 		// -La Comarca = $3
 		// -Lothlorien = $35
@@ -118,7 +118,7 @@ public class PromotionTest {
 		// Las dos Atracciones que incluye tienen un tiempo individual de: 
 		// -Bosque Negro = 4hs.
 		// -Mordor = 3hs.
-		// Tiempo que se necesita para la promocion es de 4 + 3 = 7hs.
+		// Tiempo que se necesita para la promotion es de 4 + 3 = 7hs.
 		assertEquals(7.5, promotion.getTime(), 0.001);
 		
 		assertEquals(PromotionType.ABSOLUTE, promotion.getPromotionType());
@@ -161,7 +161,7 @@ public class PromotionTest {
 		//System.out.println(promotion.getCost());
 		//System.out.println(promotion.getTime());
 		
-		// Este tipo de promocion realiza un descuento de un que por llevar tres productos Atracciones
+		// Este tipo de promotion realiza un descuento de un que por llevar tres productos Atracciones
 		// la ultima es gratuita.-
 		// Las dos Atracciones que incluye tienen un presio de: 
 		// -Minas Tirith = $5
@@ -176,7 +176,7 @@ public class PromotionTest {
 		// -Minas Tirith = 2.5hs. 
 		// -Abismo de Helm = 2hs.
 		// -Erebor = 3hs.
-		// Tiempo que se necesita para la promocion es de 4 + 3 = 7
+		// Tiempo que se necesita para la promotion es de 4 + 3 = 7
 		assertEquals(7.5, promotion.getTime(), 0.001);
 						
 	}

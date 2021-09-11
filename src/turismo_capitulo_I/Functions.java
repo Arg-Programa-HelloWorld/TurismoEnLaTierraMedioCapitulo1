@@ -253,7 +253,7 @@ public class Functions {
 				
 				for (Attraction atraction : promotion.getAttractionsList()) {
 					
-					if (Model.user.haveAttraction(atraction)) { // Si tengo las atracciones de la promocion
+					if (Model.user.haveAttraction(atraction)) { // Si tengo las atracciones de la promotion
 						
 						View.colorearMensaje(View.red,"[---------------------------------------------------------------------]");
 						View.colorearMensaje(View.red,"[ The '" + promotion.name + "' promotion has been blocked because it"); 
