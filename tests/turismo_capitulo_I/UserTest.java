@@ -31,9 +31,7 @@ public class UserTest {
 		attractionsList = new ArrayList<Attraction>();
 		attractionsList2 = new ArrayList<Attraction>();
 		promotionsList = new ArrayList<Promotion>();
-				
-		//promocion = new PromotionAbsolute(1, PromotionType.ABSOLUTE, "Oferton", attractionsList2, 5);
-					
+							
 	}
 	
 	@After
