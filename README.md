@@ -1,6 +1,6 @@
 # TurismoEnLaTierraMedioCapitulo1
 
-                                                          Trabajo Práctico, Capítulo I
+Trabajo Práctico, Capítulo I
 
 Este trabajo tiene como objetivo afianzar la práctica de la Programación Orientada a Objetos. En particular, de los mecanismos de herencia, polimorfismo, clases abstractas e interfaces.
 Turismo en la Tierra Media
