@@ -35,11 +35,6 @@ public class View {
 	}
 	
 	public static void ready() {
-		/*
-		System.out.println("[---------------------------------------------------------------------]");
-		System.out.println("[                        READY-TO-USE SYSTEM                          ]");
-		System.out.println("[---------------------------------------------------------------------]");
-		*/
 		
 		colorearMensaje(green,"[---------------------------------------------------------------------]");
 		colorearMensaje(green,"[                        READY-TO-USE SYSTEM                          ]");
@@ -48,9 +43,17 @@ public class View {
 	
 	public static void warning() {
 		
-		System.out.println("[---------------------------------------------------------------------]");
-		System.out.println("[              Warning - Error in the use of the System               ]");
-		System.out.println("[---------------------------------------------------------------------]");
+		colorearMensaje(red,"[---------------------------------------------------------------------]");
+		colorearMensaje(red,"[              Warning - Error in the use of the System               ]");
+		colorearMensaje(red,"[---------------------------------------------------------------------]");
+		
+	}
+	
+	public static void greetings() {
+		
+		colorearMensaje(blue,"[---------------------------------------------------------------------]");
+		colorearMensaje(blue,"[                       ENJOY THE ADVENTURE !!!                       ]");
+		colorearMensaje(blue,"[---------------------------------------------------------------------]");
 		
 	}
 	
@@ -178,13 +181,12 @@ public class View {
 		//System.out.println();
 
 	}
-	
-	public static void greetings() {
-		colorearMensaje(green,"[---------------------------------------------------------------------]");
-		colorearMensaje(green,"[                        ENJOY THE ADVENTURE!!!                       ]");
-		colorearMensaje(green,"[---------------------------------------------------------------------]");
+		
+	public static void farewellGreetings() {
+		colorearMensaje(blue,"[---------------------------------------------------------------------]");
+		colorearMensaje(blue,"[                  SEE YOU IN THE NEXT ADVENTURE !!!                  ]");
+		colorearMensaje(blue,"[---------------------------------------------------------------------]");
 	}
-	
 	
 
 }

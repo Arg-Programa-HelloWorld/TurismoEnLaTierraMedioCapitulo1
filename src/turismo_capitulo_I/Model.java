@@ -23,7 +23,8 @@ public class Model {
 			int idMenu;
 			int idMenuPromotion;
 			int idMenuAttraction;
-			
+			System.out.println();
+			View.greetings();
 			View.userMenu();	//
 	
 			System.out.println("[ Enter your user ID or type '0' to exit: ");
@@ -126,7 +127,9 @@ public class Model {
 			
 				
 		}while(idUser != 0); // 0 - Exit.-
-			View.greetings();
+			
+			View.farewellGreetings();
+			
 			scanner.close();
 	}
 		
