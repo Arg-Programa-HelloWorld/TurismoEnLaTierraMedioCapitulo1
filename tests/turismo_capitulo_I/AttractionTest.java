@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AttractionTest {
 		
 	@Test
-	public void creoUnaAtraccion() {
+	public void ICreateAnAttraction() {
 	
 		Attraction attraction = new Attraction(100,"Paso de Caradhras", 9, 8, 7, AttractionType.SCENERY);
 				
